@@ -1,0 +1,105 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* Main Content Section */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.main-content .text-content {
+    padding: 20px;
+}
+
+.main-content .image-content img {
+    width: 100%;
+    height: auto;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Media Queries */
+
+/* Small screens (up to 600px) */
+@media (max-width: 600px) {
+    header, footer {
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .main-content .image-content img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Medium screens (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        justify-content: center;
+    }
+}
+
+/* Large screens (above 1024px) */
+@media (min-width: 1025px) {
+    nav {
+        justify-content: flex-end;
+    }
+}
+
+/* Transitions for header and footer */
+header, footer {
+    transition: background-color 0.3s ease;
+}
+
+header:hover, footer:hover {
+    background-color: #444;
+}
